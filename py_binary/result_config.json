@@ -1,0 +1,476 @@
+[
+  {
+    "local_supervision_id": 1052,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseRestOfTheWorld",
+        "DrivingRestOfTheWorld"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1051,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseRestOfTheWorld",
+        "DrivingRestOfTheWorld"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1101,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1102,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1103,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Base",
+        "Startup",
+        "On",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 1201,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1202,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1203,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Base",
+        "Startup",
+        "On",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 1301,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1302,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1303,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Base",
+        "On",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 1401,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1402,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "On",
+        "Base",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1403,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Base",
+        "On",
+        "CvOff"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 1081,
+    "function_group": "MachineFG",
+    "function_group_state_groups": [
+      [
+        "PlatformOnly",
+        "Running",
+        "SoftRestart"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5201,
+    "function_group": "IKS",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 5202,
+    "function_group": "IKS",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5203,
+    "function_group": "IKS",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 1062,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseChina",
+        "DrivingChina"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1061,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseChina",
+        "DrivingChina"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 1072,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseChina",
+        "DrivingChina"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 1071,
+    "function_group": "CountryVariant",
+    "function_group_state_groups": [
+      [
+        "BaseChina",
+        "DrivingChina"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 5102,
+    "function_group": "MachineFG",
+    "function_group_state_groups": [
+      [
+        "Running"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5101,
+    "function_group": "MachineFG",
+    "function_group_state_groups": [
+      [
+        "Running"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 5402,
+    "function_group": "Driving",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Flashing"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5501,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On",
+        "Flashing"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5502,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5601,
+    "function_group": "SRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5602,
+    "function_group": "SRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "alive"
+    ]
+  },
+  {
+    "local_supervision_id": 5503,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 5504,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 5505,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 5506,
+    "function_group": "MRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "deadline"
+    ]
+  },
+  {
+    "local_supervision_id": 5603,
+    "function_group": "SRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  },
+  {
+    "local_supervision_id": 5604,
+    "function_group": "SRR",
+    "function_group_state_groups": [
+      [
+        "Startup",
+        "On"
+      ]
+    ],
+    "supervision_types": [
+      "logical"
+    ]
+  }
+]

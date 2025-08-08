@@ -1,0 +1,46 @@
+- name: Generate and upload ipn_main app_hash
+  hosts: all
+  tasks:
+    - name: Find a2l generator log
+      win_find:
+        paths: "{{ zuul_logs_dir }}"
+        recurse: yes
+        patterns: "test.log"
+      register: test_logs
+
+    - name: Define component log paths
+      set_fact:
+        component_log_list: "{{ component_log_list | default([]) + [(item.path | dirname | dirname) + '/' + (item.path | dirname | basename) + '_' + (item.path | basename)] }}"
+        cacheable: true
+      with_items: "{{ test_logs.files }}"
+
+    - name: Rename logs with component name
+      copy:
+        remote_src: true
+        src: "{{ item.0.path }}"
+        dest: "{{ item.1 }}"
+      loop: "{{ test_logs.files | zip(dst_list) | list }}"
+
+
+      #######
+      log_files:
+        - base_path: "{{ bazel_workspace }}/bazel-testlogs/external/orion/modules/adac/test/component"
+          file_pattern:
+            - "test.log"
+          recursive: true
+          keep_structure_from: "component"
+          dst: component_logs
+
+
+      ##### playbooks/ncar/artifacts-upload-manual.yaml
+      ##### playbooks/ncar/artifacts-upload.yaml
+      - name: Upload log files
+      include_role:
+        name: artifactory-upload
+      vars:
+        artifactory_url: "{{ ncar_upload.artifactory_url | default(ddad_artifactory_url) }}"
+        artifactory_upload:
+          - repo_path: "{{ ncar_upload.artifactory_repo }}{{ repo_path }}/{{ ncar_upload.logs_sub_path | default('') }}"
+            src: "{{ item }}"
+      with_items: component_log_list
+      when: component_log_list is defined

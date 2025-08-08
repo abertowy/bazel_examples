@@ -1,0 +1,82 @@
+
+{
+  "name" : "AdMake40msAsilB",
+  "reportingBehavior" : "REPORTS-EXECUTION-STATE",
+  "executableType" : "NOT_DAEMON",
+  "processes" : [
+    {
+      "name" : "AdMake40msAsilB_instance",
+      "shortNamePath" : "/bmw/ipnext/driving/ad_make_40ms_asil_b/AdMake40msAsilB_instance",
+      "startupConfigs" : [
+        {
+          "shortNamePath" : "/bmw/ipnext/driving/ad_make_40ms_asil_b/AdMake40msAsilB_IPNextad_make_40ms_asil_b_instanceDrivingStartupConfigs/StartupDrivingRunning",
+          "schedulingPolicy" : "SCHED_FIFO",
+          "schedulingPriority" : 13,
+          "securityPolicy" : "AdMake40msAsilB_t",
+          "options" : [
+          ],
+          "environmentVariables" : [
+            {
+              "key" : "AMSR_PROCESS_CONFIG_DIR",
+              "value" : "./etc"
+            },
+            {
+              "key" : "AMSR_EXECUTABLE_CONFIG_DIR",
+              "value" : "./etc"
+            },
+            {
+              "key" : "AMSR_STEADY_MODE",
+              "value" : "false"
+            },
+            {
+              "key" : "AMSR_DEFAULT_RESOURCE_SIZE",
+              "value" : "3100000"
+            },
+            {
+              "key" : "AMSR_DEFAULT_RESOURCE_EXPANDING",
+              "value" : "true"
+            }
+          ],
+          "executionDependency" : {
+          },
+          "functionGroups" : [
+            {
+              "name" : "Driving",
+              "states" : [
+                "On",
+                "Startup",
+                "Base",
+                "CvOff"
+              ]
+            }
+          ],
+          "cores" : {
+            "shallRunOn" : [
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "enterTimeoutNanoSeconds" : 14000000000,
+          "exitTimeoutNanoSeconds" : 2000000000,
+          "userId" : 7102,
+          "primaryGroupId" : 7102,
+          "secondaryGroupIds" : [
+            56,
+            1054,
+            1094,
+            3020,
+            11001,
+            16007,
+            10007
+          ]
+        }
+      ]
+    }
+  ],
+  "generatorVersion" : {
+    "name" : "amsr_em_exec_config",
+    "commitId" : "0104056602d78b305e7ea8421d47876c3c19870f"
+  }
+}
