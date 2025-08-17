@@ -21,6 +21,7 @@ steps:
   displayName: 'Build Bazel Target: hello_world_template'
 
 - script: |
-    bazel cquery //expand_template:hello_world_template --output=files
-    ls -al bazel-out/expand_template
-  displayName: 'Run a multi-line script'
+    OUTPUT_FILES=$(bazel cquery //expand_template:hello_world_template --output=files)
+    echo $OUTPUT_FILES
+    ls $OUTPUT_FILES
+  displayName: 'Check build results'
