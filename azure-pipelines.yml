@@ -9,19 +9,50 @@ trigger:
 pool:
   name: default
 
-steps:
-- script: |
-    wget https://github.com/bazelbuild/bazel/releases/download/7.6.1/bazel-7.6.1-installer-linux-x86_64.sh
-    chmod +x bazel-7.6.1-installer-linux-x86_64.sh
-    ./bazel-7.6.1-installer-linux-x86_64.sh --user
-    echo "##vso[task.prependpath]$HOME/bin"
-  displayName: 'Install Bazel'
+stages:
+- stage: InstallBazel
+  displayName: Install Bazel on the Host Machine
+  jobs:
+  - job: DownloadAndInstall
+    displayName: Download & Install
+    steps:
+    - script: |
+        wget https://github.com/bazelbuild/bazel/releases/download/7.6.1/bazel-7.6.1-installer-linux-x86_64.sh
+        chmod +x bazel-7.6.1-installer-linux-x86_64.sh
+        ./bazel-7.6.1-installer-linux-x86_64.sh --user
+        echo "##vso[task.prependpath]$HOME/bin"
+      displayName: 'Install Bazel'
 
-- script: bazel build //expand_template:hello_world_template
-  displayName: 'Build Bazel Target: hello_world_template'
+- stage: BuildTarget
+  displayName: Build Targets
+  jobs:
+  - job: BuildExpandTemplate
+    displayName: Build expand_template target
+    steps:
+    - script: bazel build //expand_template:hello_world_template
+      displayName: 'Build Bazel Target: hello_world_template'
+  - job: BuildSimpleFileOutput
+    displayName: Build simple_file_output target
+    steps:
+    - script: bazel build //simple_file_output:simple_file_output
+      displayName: 'Build Bazel Target: simple_file_output'
 
-- script: |
-    OUTPUT_FILES=$(bazel cquery //expand_template:hello_world_template --output=files)
-    echo $OUTPUT_FILES
-    ls $OUTPUT_FILES
-  displayName: 'Check build results'
+- stage: CollectOutputs
+  displayName: Collect Build Outputs
+  jobs:
+  - job: OutputExpandTemplate
+    displayName: Collect outputs for expand_template target
+    steps:
+    - script: |
+        OUTPUT_FILES=$(bazel cquery //expand_template:hello_world_template --output=files)
+        echo $OUTPUT_FILES
+        ls $OUTPUT_FILES
+      displayName: 'Check expand_template build results'
+  - job: OutputSimpleFileOutput
+    displayName: Collect outputs for simple_file_output target
+    steps:
+    - script: |
+        OUTPUT_FILES=$(bazel cquery //simple_file_output:simple_file_output --output=files)
+        echo $OUTPUT_FILES
+        ls $OUTPUT_FILES
+      displayName: 'Check simple_file_output build results'
