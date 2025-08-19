@@ -22,6 +22,7 @@ steps:
 - task: Bash@3
   displayName: 'Check smart_pointer build results'
   inputs:
+    targetType: 'inline'
     script: |
       SP_BINARY=$(bazel cquery //cc_binary:smart_pointer --output=files)
       echo "##vso[task.setvariable variable=SPBinary;]$SP_BINARY"
@@ -29,6 +30,7 @@ steps:
 - task: Bash@3
   displayName: 'Check static_vector build results'
   inputs:
+    targetType: 'inline'
     script: |
       SV_BINARY=$(bazel cquery //cc_binary:static_vector --output=files)
       echo "##vso[task.setvariable variable=SVBinary;]$SV_BINARY"
