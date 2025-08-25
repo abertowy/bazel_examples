@@ -1,4 +1,4 @@
-#include "smart_pointer.h"
+#include "shared_pointer.h"
 
 int main() {
     std::cout << "==== straight forward definition" << std::endl;
