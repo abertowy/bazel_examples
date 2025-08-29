@@ -1,6 +1,11 @@
 #include <iostream>
 #include <string>
 
+
+// char* const cp;		// константный указатель на char
+// char const* pc;		// указатель на константу типа char
+// const char* pc2;	    // указатель на константу типа char
+
 class Document {
     std::string content;
 

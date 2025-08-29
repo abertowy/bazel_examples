@@ -8,8 +8,7 @@ template<typename T>
 struct has_size_method<T, std::void_t<decltype(std::declval<T>().size())>> : std::true_type {};
 
 template<typename Container>
-auto get_size(const Container& c)-> std::enable_if_t<has_size_method<Container>::value, size_t>
-{
+auto get_size(const Container& c)-> std::enable_if_t<has_size_method<Container>::value, size_t> {
     return c.size();
 }
 
